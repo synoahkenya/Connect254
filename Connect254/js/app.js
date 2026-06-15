@@ -1,20 +1,20 @@
-// PAYSTACK PUBLIC KEY - REPLACE WITH YOUR ACTUAL PAYSTACK TEST KEY
-const PAYSTACK_PUBLIC_KEY = 'pk_test_d0df49836e9b84a2a1e0e1e8e4e5e6e7e8e9e0e1';
+// PAYSTACK PUBLIC KEY - LIVE MODE ACTIVATED
+const PAYSTACK_PUBLIC_KEY = 'pk_live_8c4dc29601e600f6ce410f2a2495bc3ba6c0f9c0';
 
 // WAZUNGU PROFILES WITH EARNING RATES ($10-$20 per day)
 const wazunguProfiles = [
-    { id: 1, name: "Sarah Williams", age: 28, country: "🇬🇧 London, UK", bio: "Love African culture! Paying $12/day for genuine conversation.", interests: ["Music", "Travel", "Cooking"], avatar: "https://randomuser.me/api/portraits/women/1.jpg", online: true, hourlyRate: 0.50, dailyEarning: 12 },
-    { id: 2, name: "James Anderson", age: 32, country: "🇺🇸 New York, USA", bio: "Business consultant paying $15/day for Swahili practice.", interests: ["Business", "Football", "Tech"], avatar: "https://randomuser.me/api/portraits/men/2.jpg", online: true, hourlyRate: 0.625, dailyEarning: 15 },
-    { id: 3, name: "Emma Thompson", age: 26, country: "🇨🇦 Toronto, Canada", bio: "Teacher offering $18/day for language exchange!", interests: ["Teaching", "Reading", "Hiking"], avatar: "https://randomuser.me/api/portraits/women/3.jpg", online: true, hourlyRate: 0.75, dailyEarning: 18 },
-    { id: 4, name: "Michael Brown", age: 35, country: "🇦🇺 Sydney, Australia", bio: "Photographer paying $20/day for Kenyan friends!", interests: ["Photography", "Nature", "Art"], avatar: "https://randomuser.me/api/portraits/men/4.jpg", online: true, hourlyRate: 0.83, dailyEarning: 20 },
-    { id: 5, name: "Sophie Martin", age: 29, country: "🇫🇷 Paris, France", bio: "Love African music! Paying $14/day for culture chats.", interests: ["Dance", "Fashion", "Music"], avatar: "https://randomuser.me/api/portraits/women/5.jpg", online: true, hourlyRate: 0.58, dailyEarning: 14 },
-    { id: 6, name: "David Wilson", age: 31, country: "🇩🇪 Berlin, Germany", bio: "Engineer moving to Nairobi. Paying $16/day!", interests: ["Engineering", "Running", "Chess"], avatar: "https://randomuser.me/api/portraits/men/6.jpg", online: true, hourlyRate: 0.67, dailyEarning: 16 },
-    { id: 7, name: "Olivia Johnson", age: 27, country: "🇸🇪 Stockholm, Sweden", bio: "Volunteer paying $17/day for Kenyan friends!", interests: ["Volunteering", "Animals", "Coffee"], avatar: "https://randomuser.me/api/portraits/women/7.jpg", online: true, hourlyRate: 0.71, dailyEarning: 17 },
-    { id: 8, name: "Daniel Garcia", age: 33, country: "🇪🇸 Madrid, Spain", bio: "Travel lover paying $13/day for Spanish-Swahili exchange!", interests: ["Football", "Travel", "Food"], avatar: "https://randomuser.me/api/portraits/men/8.jpg", online: true, hourlyRate: 0.54, dailyEarning: 13 },
-    { id: 9, name: "Isabella Rossi", age: 25, country: "🇮🇹 Rome, Italy", bio: "Fashion blogger paying $19/day for Kenyan fashion!", interests: ["Fashion", "Photography", "Coffee"], avatar: "https://randomuser.me/api/portraits/women/9.jpg", online: true, hourlyRate: 0.79, dailyEarning: 19 },
-    { id: 10, name: "Thomas Lee", age: 30, country: "🇸🇬 Singapore", bio: "Digital nomad paying $15/day for recommendations!", interests: ["Tech", "Food", "Nightlife"], avatar: "https://randomuser.me/api/portraits/men/10.jpg", online: true, hourlyRate: 0.625, dailyEarning: 15 },
-    { id: 11, name: "Natalie Clark", age: 24, country: "🇳🇿 Auckland, New Zealand", bio: "Student paying $11/day for book chats!", interests: ["Reading", "Writing", "Art"], avatar: "https://randomuser.me/api/portraits/women/11.jpg", online: true, hourlyRate: 0.46, dailyEarning: 11 },
-    { id: 12, name: "Robert Martinez", age: 34, country: "🇲🇽 Mexico City, Mexico", bio: "Chef paying $20/day for recipe exchange!", interests: ["Cooking", "Travel", "Music"], avatar: "https://randomuser.me/api/portraits/men/12.jpg", online: true, hourlyRate: 0.83, dailyEarning: 20 }
+    { id: 1, name: "Sarah Williams", age: 28, country: "🇬🇧 London, UK", bio: "Love African culture! Paying $12/day for genuine conversation.", interests: ["Music", "Travel", "Cooking"], avatar: "https://i.pravatar.cc/150?img=1", online: true, dailyEarning: 12, hourlyRate: 1.00 },
+    { id: 2, name: "James Anderson", age: 32, country: "🇺🇸 New York, USA", bio: "Business consultant paying $15/day for Swahili practice.", interests: ["Business", "Football", "Tech"], avatar: "https://i.pravatar.cc/150?img=2", online: true, dailyEarning: 15, hourlyRate: 1.25 },
+    { id: 3, name: "Emma Thompson", age: 26, country: "🇨🇦 Toronto, Canada", bio: "Teacher offering $18/day for language exchange!", interests: ["Teaching", "Reading", "Hiking"], avatar: "https://i.pravatar.cc/150?img=3", online: false, dailyEarning: 18, hourlyRate: 1.50 },
+    { id: 4, name: "Michael Brown", age: 35, country: "🇦🇺 Sydney, Australia", bio: "Photographer paying $20/day for Kenyan friends!", interests: ["Photography", "Nature", "Art"], avatar: "https://i.pravatar.cc/150?img=4", online: true, dailyEarning: 20, hourlyRate: 1.67 },
+    { id: 5, name: "Sophie Martin", age: 29, country: "🇫🇷 Paris, France", bio: "Love African music! Paying $14/day for culture chats.", interests: ["Dance", "Fashion", "Music"], avatar: "https://i.pravatar.cc/150?img=5", online: true, dailyEarning: 14, hourlyRate: 1.17 },
+    { id: 6, name: "David Wilson", age: 31, country: "🇩🇪 Berlin, Germany", bio: "Engineer moving to Nairobi. Paying $16/day!", interests: ["Engineering", "Running", "Chess"], avatar: "https://i.pravatar.cc/150?img=6", online: false, dailyEarning: 16, hourlyRate: 1.33 },
+    { id: 7, name: "Olivia Johnson", age: 27, country: "🇸🇪 Stockholm, Sweden", bio: "Volunteer paying $17/day for Kenyan friends!", interests: ["Volunteering", "Animals", "Coffee"], avatar: "https://i.pravatar.cc/150?img=7", online: true, dailyEarning: 17, hourlyRate: 1.42 },
+    { id: 8, name: "Daniel Garcia", age: 33, country: "🇪🇸 Madrid, Spain", bio: "Travel lover paying $13/day for Spanish-Swahili exchange!", interests: ["Football", "Travel", "Food"], avatar: "https://i.pravatar.cc/150?img=8", online: true, dailyEarning: 13, hourlyRate: 1.08 },
+    { id: 9, name: "Isabella Rossi", age: 25, country: "🇮🇹 Rome, Italy", bio: "Fashion blogger paying $19/day for Kenyan fashion!", interests: ["Fashion", "Photography", "Coffee"], avatar: "https://i.pravatar.cc/150?img=9", online: false, dailyEarning: 19, hourlyRate: 1.58 },
+    { id: 10, name: "Thomas Lee", age: 30, country: "🇸🇬 Singapore", bio: "Digital nomad paying $15/day for recommendations!", interests: ["Tech", "Food", "Nightlife"], avatar: "https://i.pravatar.cc/150?img=10", online: true, dailyEarning: 15, hourlyRate: 1.25 },
+    { id: 11, name: "Natalie Clark", age: 24, country: "🇳🇿 Auckland, New Zealand", bio: "Student paying $11/day for book chats!", interests: ["Reading", "Writing", "Art"], avatar: "https://i.pravatar.cc/150?img=11", online: true, dailyEarning: 11, hourlyRate: 0.92 },
+    { id: 12, name: "Robert Martinez", age: 34, country: "🇲🇽 Mexico City, Mexico", bio: "Chef paying $20/day for recipe exchange!", interests: ["Cooking", "Travel", "Music"], avatar: "https://i.pravatar.cc/150?img=12", online: false, dailyEarning: 20, hourlyRate: 1.67 }
 ];
 
 // Global variables
@@ -88,9 +88,9 @@ function renderProfiles() {
                     ${profile.interests.map(i => `<span class="bg-pink-100 text-pink-600 text-xs px-2 py-1 rounded-full">${i}</span>`).join('')}
                 </div>
                 <div class="bg-green-50 rounded-lg p-2 mb-3 text-center">
-                    <span class="text-green-700 font-bold text-sm">💰 You earn $${profile.hourlyRate}/hour chatting</span>
+                    <span class="text-green-700 font-bold text-sm">💰 You earn $${profile.hourlyRate.toFixed(2)}/hour chatting</span>
                 </div>
-                <button onclick="selectProfile(${profile.id})" class="w-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold py-2 rounded-xl hover:shadow-lg transition">
+                <button onclick="selectProfile(${profile.id})" class="w-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold py-2 rounded-xl hover:shadow-lg transition select-profile-btn">
                     💬 Chat & Earn $${profile.dailyEarning}
                 </button>
             </div>
@@ -138,8 +138,8 @@ function openChatModal() {
     document.getElementById('modal-avatar').src = w.avatar;
     document.getElementById('modal-name').innerHTML = `${w.name} ${w.online ? '<span class="text-green-400 text-sm">● Online</span>' : '<span class="text-gray-400 text-sm">● Offline</span>'}`;
     document.getElementById('modal-country').innerText = w.country;
-    document.getElementById('modal-earning-rate').innerHTML = `$${w.hourlyRate}/hour`;
-    document.getElementById('hourly-rate-display').innerHTML = `$${w.hourlyRate}`;
+    document.getElementById('modal-earning-rate').innerHTML = `$${w.hourlyRate.toFixed(2)}/hour`;
+    document.getElementById('hourly-rate-display').innerHTML = `$${w.hourlyRate.toFixed(2)}`;
     
     const container = document.getElementById('modal-chat-messages');
     container.innerHTML = '';
