@@ -1,0 +1,142 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-love {
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 1.5rem;
+    animation: floatHeart 6s linear infinite;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 50%, #ffb4b4 100%);
+}
+
+.profile-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.chat-container {
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-bubble {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.message-user {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.message-wazungu {
+    background: #f3f4f6;
+    color: #1f2937;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.online-indicator {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.timer-warning {
+    animation: pulse 1s infinite;
+    background-color: #ef4444 !important;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Scrollbar styling */
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #ff6b6b;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #ff4444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .message-bubble {
+        max-width: 85%;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Loading animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+    background-size: 1000px 100%;
+}
