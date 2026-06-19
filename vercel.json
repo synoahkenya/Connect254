@@ -1,7 +1,22 @@
 {
   "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "buildCommand": "echo 'Static site deployment'",
-  "outputDirectory": "Connect254"
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Connect254/$1"
+    }
+  ],
+  "env": {
+    "PAYSTACK_SECRET_KEY": "sk_live_8c4dc29601e600f6ce410f2a2495bc3ba6c0f9c0"
+  }
 }
