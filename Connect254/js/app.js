@@ -1,20 +1,22 @@
-// PAYSTACK PUBLIC KEY - LIVE MODE ACTIVATED
-const PAYSTACK_PUBLIC_KEY = 'pk_live_8c4dc29601e600f6ce410f2a2495bc3ba6c0f9c0';
+// PAYSTACK PUBLIC KEY - Use environment variable or fallback to the correct public key
+const PAYSTACK_PUBLIC_KEY = typeof process !== 'undefined' && process.env.VITE_PAYSTACK_PUBLIC_KEY 
+  ? process.env.VITE_PAYSTACK_PUBLIC_KEY 
+  : 'pk_live_db75977dc929639504d6a50f8ae8cc9ff6ac5097';
 
 // WAZUNGU PROFILES WITH EARNING RATES ($10-$20 per day)
 const wazunguProfiles = [
-    { id: 1, name: "Sarah Williams", age: 28, country: "🇬🇧 London, UK", bio: "Love African culture! Paying $12/day for genuine conversation.", interests: ["Music", "Travel", "Cooking"], avatar: "https://i.pravatar.cc/150?img=1", online: true, dailyEarning: 12, hourlyRate: 1.00 },
-    { id: 2, name: "James Anderson", age: 32, country: "🇺🇸 New York, USA", bio: "Business consultant paying $15/day for Swahili practice.", interests: ["Business", "Football", "Tech"], avatar: "https://i.pravatar.cc/150?img=2", online: true, dailyEarning: 15, hourlyRate: 1.25 },
-    { id: 3, name: "Emma Thompson", age: 26, country: "🇨🇦 Toronto, Canada", bio: "Teacher offering $18/day for language exchange!", interests: ["Teaching", "Reading", "Hiking"], avatar: "https://i.pravatar.cc/150?img=3", online: false, dailyEarning: 18, hourlyRate: 1.50 },
+    { id: 1, name: "Sarah Williams", age: 28, country: "🇬🇧 London, UK", bio: "Love African culture! Paying $12/day for genuine conversation.", interests: ["Music", "Travel", "Cooking"], avatar: "https://i.pravatar.cc/150?img=1", online: true, dailyEarning: 12, hourlyRate: 0.83 },
+    { id: 2, name: "James Anderson", age: 32, country: "🇺🇸 New York, USA", bio: "Business consultant paying $15/day for Swahili practice.", interests: ["Business", "Football", "Tech"], avatar: "https://i.pravatar.cc/150?img=2", online: true, dailyEarning: 15, hourlyRate: 1.04 },
+    { id: 3, name: "Emma Thompson", age: 26, country: "🇨🇦 Toronto, Canada", bio: "Teacher offering $18/day for language exchange!", interests: ["Teaching", "Reading", "Hiking"], avatar: "https://i.pravatar.cc/150?img=3", online: false, dailyEarning: 18, hourlyRate: 1.25 },
     { id: 4, name: "Michael Brown", age: 35, country: "🇦🇺 Sydney, Australia", bio: "Photographer paying $20/day for Kenyan friends!", interests: ["Photography", "Nature", "Art"], avatar: "https://i.pravatar.cc/150?img=4", online: true, dailyEarning: 20, hourlyRate: 1.67 },
-    { id: 5, name: "Sophie Martin", age: 29, country: "🇫🇷 Paris, France", bio: "Love African music! Paying $14/day for culture chats.", interests: ["Dance", "Fashion", "Music"], avatar: "https://i.pravatar.cc/150?img=5", online: true, dailyEarning: 14, hourlyRate: 1.17 },
-    { id: 6, name: "David Wilson", age: 31, country: "🇩🇪 Berlin, Germany", bio: "Engineer moving to Nairobi. Paying $16/day!", interests: ["Engineering", "Running", "Chess"], avatar: "https://i.pravatar.cc/150?img=6", online: false, dailyEarning: 16, hourlyRate: 1.33 },
-    { id: 7, name: "Olivia Johnson", age: 27, country: "🇸🇪 Stockholm, Sweden", bio: "Volunteer paying $17/day for Kenyan friends!", interests: ["Volunteering", "Animals", "Coffee"], avatar: "https://i.pravatar.cc/150?img=7", online: true, dailyEarning: 17, hourlyRate: 1.42 },
-    { id: 8, name: "Daniel Garcia", age: 33, country: "🇪🇸 Madrid, Spain", bio: "Travel lover paying $13/day for Spanish-Swahili exchange!", interests: ["Football", "Travel", "Food"], avatar: "https://i.pravatar.cc/150?img=8", online: true, dailyEarning: 13, hourlyRate: 1.08 },
-    { id: 9, name: "Isabella Rossi", age: 25, country: "🇮🇹 Rome, Italy", bio: "Fashion blogger paying $19/day for Kenyan fashion!", interests: ["Fashion", "Photography", "Coffee"], avatar: "https://i.pravatar.cc/150?img=9", online: false, dailyEarning: 19, hourlyRate: 1.58 },
-    { id: 10, name: "Thomas Lee", age: 30, country: "🇸🇬 Singapore", bio: "Digital nomad paying $15/day for recommendations!", interests: ["Tech", "Food", "Nightlife"], avatar: "https://i.pravatar.cc/150?img=10", online: true, dailyEarning: 15, hourlyRate: 1.25 },
-    { id: 11, name: "Natalie Clark", age: 24, country: "🇳🇿 Auckland, New Zealand", bio: "Student paying $11/day for book chats!", interests: ["Reading", "Writing", "Art"], avatar: "https://i.pravatar.cc/150?img=11", online: true, dailyEarning: 11, hourlyRate: 0.92 },
-    { id: 12, name: "Robert Martinez", age: 34, country: "🇲🇽 Mexico City, Mexico", bio: "Chef paying $20/day for recipe exchange!", interests: ["Cooking", "Travel", "Music"], avatar: "https://i.pravatar.cc/150?img=12", online: false, dailyEarning: 20, hourlyRate: 1.67 }
+    { id: 5, name: "Sophie Martin", age: 29, country: "🇫🇷 Paris, France", bio: "Love African music! Paying $14/day for culture chats.", interests: ["Dance", "Fashion", "Music"], avatar: "https://i.pravatar.cc/150?img=5", online: true, dailyEarning: 14, hourlyRate: 0.97 },
+    { id: 6, name: "David Wilson", age: 31, country: "🇩🇪 Berlin, Germany", bio: "Engineer moving to Nairobi. Paying $16/day!", interests: ["Engineering", "Running", "Chess"], avatar: "https://i.pravatar.cc/150?img=6", online: false, dailyEarning: 16, hourlyRate: 1.11 },
+    { id: 7, name: "Olivia Johnson", age: 27, country: "🇸🇪 Stockholm, Sweden", bio: "Volunteer paying $17/day for Kenyan friends!", interests: ["Volunteering", "Animals", "Coffee"], avatar: "https://i.pravatar.cc/150?img=7", online: true, dailyEarning: 17, hourlyRate: 1.18 },
+    { id: 8, name: "Daniel Garcia", age: 33, country: "🇪🇸 Madrid, Spain", bio: "Travel lover paying $13/day for Spanish-Swahili exchange!", interests: ["Football", "Travel", "Food"], avatar: "https://i.pravatar.cc/150?img=8", online: true, dailyEarning: 13, hourlyRate: 0.90 },
+    { id: 9, name: "Isabella Rossi", age: 25, country: "🇮🇹 Rome, Italy", bio: "Fashion blogger paying $19/day for Kenyan fashion!", interests: ["Fashion", "Photography", "Coffee"], avatar: "https://i.pravatar.cc/150?img=9", online: false, dailyEarning: 19, hourlyRate: 1.32 },
+    { id: 10, name: "Thomas Lee", age: 30, country: "🇸🇬 Singapore", bio: "Digital nomad paying $15/day for recommendations!", interests: ["Tech", "Food", "Nightlife"], avatar: "https://i.pravatar.cc/150?img=10", online: true, dailyEarning: 15, hourlyRate: 1.04 },
+    { id: 11, name: "Natalie Clark", age: 24, country: "🇳🇿 Auckland, New Zealand", bio: "Student paying $11/day for book chats!", interests: ["Reading", "Writing", "Art"], avatar: "https://i.pravatar.cc/150?img=11", online: true, dailyEarning: 11, hourlyRate: 0.76 },
+    { id: 12, name: "Robert Martinez", age: 34, country: "🇲🇽 Mexico City, Mexico", bio: "Chef paying $20/day for recipe exchange!", interests: ["Cooking", "Travel", "Music"], avatar: "https://i.pravatar.cc/150?img=12", online: false, dailyEarning: 20, hourlyRate: 1.67 },
 ];
 
 // Global variables
